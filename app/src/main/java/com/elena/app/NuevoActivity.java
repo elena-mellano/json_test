@@ -1,5 +1,6 @@
 package com.elena.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.app.AlertDialog;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.FileWriter;
@@ -59,7 +61,7 @@ public class NuevoActivity extends ActionBarActivity {
             String json=null;
             String json2=null;
             try {
-                InputStream is = getAssets().open("supermercado.json");
+                InputStream is = openFileInput("supermercado.json");
                 int size = is.available();
                 byte[] buffer = new byte[size];
                 is.read(buffer);
@@ -70,14 +72,27 @@ public class NuevoActivity extends ActionBarActivity {
             }
             Type collectionType = new TypeToken<ArrayList<Tienda>>(){}.getType();
             ArrayList<Tienda> tott = gson.fromJson(json2, collectionType);
-
-            tott.add(t);
+            int f=0;
+            for (int i=0;i<tott.size();i++){
+                if ( tott.get(i).getSupermercado().equals(t.getSupermercado())){
+                    tott.get(i).setManzana(t.getManzana());
+                    tott.get(i).setPan(t.getPan());
+                    f=1;
+                }
+            }
+            if (f==0){
+                tott.add(t);
+            }
 
             try {
-                FileWriter file = new FileWriter("c://supermercado.json");
-                file.write(json);
+                FileOutputStream file = openFileOutput("supermercado.json",MODE_PRIVATE);
+                json=gson.toJson(tott,collectionType);
+                file.write(json.getBytes());
                 file.flush();
                 file.close();
+                Intent start=new Intent(NuevoActivity.this, MainActivity.class);
+                startActivity(start); //
+
             } catch (Exception e) {
                 json=gson.toJson(tott,collectionType);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);

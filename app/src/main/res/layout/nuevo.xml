@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    android:weightSum="1"
+    android:orientation="vertical">
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:id="@+id/editText"
-        android:text="Tienda" />
+        android:text="Tienda"
+        android:selectAllOnFocus="true"
+        android:layout_weight="0.25"
+        android:textColor="#1d12ff" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText2"
-        android:text="Precio Pan" />
+        android:text="Precio Pan"
+        android:selectAllOnFocus="true"
+        android:layout_weight="0.25"
+        android:textColor="#1d12ff" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText3"
-        android:text="Precio Manzana" />
+        android:text="Precio Manzana"
+        android:selectAllOnFocus="true"
+        android:layout_weight="0.25"
+        android:textColor="#1d12ff" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="216dp"
         android:layout_height="wrap_content"
         android:text="Añadir"
         android:id="@+id/button"
-        android:layout_gravity="center_horizontal"
-        android:onClick="onClickana" />
+        android:onClick="onClickana"
+        android:textColor="#1d12ff"
+        android:background="#e5fff3"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>

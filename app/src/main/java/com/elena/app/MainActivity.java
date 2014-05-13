@@ -86,6 +86,4 @@ public class MainActivity extends ActionBarActivity {
         Intent start=new Intent(MainActivity.this, NuevoActivity.class);
         startActivity(start); //
     }
-
-
 }

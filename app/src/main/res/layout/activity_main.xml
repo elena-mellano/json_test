@@ -4,39 +4,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.elena.app.MainActivity"
-    tools:ignore="MergeRootFrame" >
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/images">
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="177dp"
+        android:layout_height="72dp"
+        android:textSize="30dip"
         android:text="Mejor precio"
         android:id="@+id/textView"
+        android:gravity="center"
         android:layout_gravity="center_horizontal|top"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title" />
+        android:textStyle="bold|italic"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textColor="#1d12ff"
+        android:layout_margin="15dp"
+        android:autoText="false"
+        android:height="20dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="130dp"
         android:text="Manzana"
         android:id="@+id/button2"
         android:layout_gravity="right|center_vertical"
-        android:onClick="onClickman" />
+        android:onClick="onClickman"
+        android:textColor="#1d12ff" />
 
     <Button
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:text="Pan"
-        android:id="@+id/button"
-        android:layout_gravity="left|center_vertical"
-        android:onClick="onClick" />
-
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:text="Añadir"
         android:id="@+id/button3"
         android:layout_gravity="center_horizontal|bottom"
-        android:onClick="onClicknuevo" />
+        android:onClick="onClicknuevo"
+        android:textColor="#1d12ff"
+        android:background="#bffdff" />
+
+    <Button
+        android:layout_width="141dp"
+        android:layout_height="134dp"
+        android:text="Pan"
+        android:id="@+id/button"
+        android:layout_gravity="left|center_vertical"
+        android:onClick="onClick"
+        android:textColor="#1d12ff" />
 </FrameLayout>
