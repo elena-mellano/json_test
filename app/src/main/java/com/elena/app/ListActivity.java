@@ -1,17 +1,13 @@
 package com.elena.app;
 
-import android.app.AlertDialog;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.content.Intent;
 import android.widget.TextView;
-
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -36,7 +32,9 @@ public class ListActivity extends ActionBarActivity {
         String json=null;
         try {
             InputStream is = openFileInput("supermercado.json");
-            int size = is.available();
+
+
+           int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
