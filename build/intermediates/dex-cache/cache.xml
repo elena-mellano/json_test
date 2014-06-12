@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\elena\Documents\GitHub\json_test\app\build\intermediates\pre-dexed\debug\gson-2.2.4-abc20ba2fbaef47ffd4a3684ababec57874884dd.jar"
+        jar="C:\Users\elena\Documents\GitHub\json_test\app\src\libs\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8"/>
+    <item
+        dex="C:\Users\elena\Documents\GitHub\json_test\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-623aefd4f5f3a6deec8a8326bafb2542700d03de.jar"
+        jar="C:\Users\elena\AppData\Local\Android\android-studio1\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="C:\Users\elena\Documents\GitHub\json_test\app\build\intermediates\pre-dexed\debug\classes-f21429b7b440b86edb074610024e503136c5a219.jar"
+        jar="C:\Users\elena\Documents\GitHub\json_test\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+
+</pre-dex-items>
